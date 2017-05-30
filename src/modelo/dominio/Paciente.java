@@ -37,6 +37,9 @@ public class Paciente {
 	@Column
 	private ArrayList<Agenda> agenda = new ArrayList<Agenda>();
 	
+	public Paciente(Integer codigoInt, String nomePaciente, String cpf, String rg, String dtnasc, String telefone,
+			String email) {
+	}
 	public ArrayList<Agenda> getAgenda() {
 		return agenda;
 	}
