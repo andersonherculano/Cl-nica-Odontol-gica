@@ -1,0 +1,449 @@
+@charset "UTF-8";
+
+p {
+	margin-left: 6%;
+	color: #000000;
+}
+
+p#rel {
+	margin-left: 25px;
+	margin-top: 30px;
+}
+
+img#arcada {
+	position: absolute;
+	left: 750px;
+	top: 160px;
+}
+
+body {
+	background-color: grey;
+}
+
+div#interface {
+	background-color: white;
+	margin: 15px 50px 17px 50px;
+	height: 580px;
+}
+
+div#cabecalho img {
+	width: 100%;
+}
+
+a#cprincipal {
+	position: absolute;
+	top: 48px;
+	left: 600px;
+	color: white;
+}
+
+a#princ {
+	position: absolute;
+	top: 48px;
+	left: 600px;
+	color: white;
+	font-size: 16px;
+}
+
+a#pesq-paciente {
+	position: absolute;
+	top: 48px;
+	left: 600px;
+	color: white;
+	font-size: 16px;
+}
+
+a#conteudop {
+	position: absolute;
+	top: 48px;
+	left: 600px;
+	color: white;
+	font-size: 16px;
+}
+
+div.img-rodape img {
+	position: absolute;
+	top: 519px;
+	width: 1250px;
+}
+
+div#rodape-logado img {
+	position: absolute;
+	top: 521px;
+	width: 1233px;
+}
+
+p#ficha {
+	margin-top: 6%;
+	margin-left: 2%;
+	color: blue;
+}
+
+p#label-pesquisa {
+	margin-top: 6%;
+	margin-left: 2.5%;
+	color: blue;
+}
+
+p#pesq-paciente {
+	margin-top: 65px;
+	margin-left: 2%;
+	border-radius: 10px;
+}
+
+p#pesq-cad {
+	margin-top: 5.5%;
+	margin-left: 25px;
+	border-radius: 10px;
+}
+
+p#pesq-odont {
+	margin-top: -10px;
+	margin-left: 25px;
+	border-radius: 10px;
+}
+
+p#pagenda-paciente {
+	margin-top: 5%;
+	margin-left: 2.5%;
+	border-radius: 10px;
+}
+
+
+form#form-cliente ul {
+	list-style: none;
+	margin-top: 0%;
+	margin-left: 1%;
+}
+
+form#form-pesq ul {
+	list-style: none;
+	margin-top: 2%;
+	margin-left: 1%;
+}
+
+#lado-direito {
+	margin-top: -30.6%;
+	margin-left: 50%
+}
+
+#centro-pesq {
+	margin-top: -31.3%;
+	margin-left: 34%
+}
+
+#lado-esquerdo {
+	margin-top: 1%;
+}
+
+#lado-esq-pesq {
+	margin-top: 1%;
+	margin-left: -1.7%
+}
+
+#lado-dir-pesq {
+	margin-top: -49%;
+	margin-left: 50%
+}
+
+#ccpf {
+	margin-top: -5.4%;
+	margin-left: 17.3%;
+}
+
+#dcpf {
+	margin-top: -5.4%;
+	margin-left: 0%;
+}
+
+#cnum {
+	margin-top: -11.4%;
+	margin-left: 64%;
+}
+
+#cbairro {
+	margin-top: -11.1%;
+	margin-left: 53%;
+}
+
+#dbairro {
+	margin-top: -16%;
+	margin-left: 0%;
+}
+
+#ccomp {
+	margin-top: -11%;
+	margin-left: 30%;
+}
+
+#ctel-cel {
+	margin-top: -11%;
+	margin-left: 32%;
+}
+
+#dtel-cel {
+	margin-top: -10%;
+}
+
+
+div#sair a {
+	position: absolute;
+	top: 8%;
+	left: 1055px;
+	color: white;
+}
+
+nav#menu ul {
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: 80px;
+	left: 40px;
+}
+
+nav#menu li {
+	display: inline-block;
+	background-color: #dddddd;
+	padding: 18px;
+	margin: 2px; 
+}
+
+nav#menu li:hover {
+	background-color: #555555;
+}
+
+ 
+nav#menu a {
+	color: #000000;
+	text-decoration: none;
+}
+
+nav#menu a:hover {
+	color: #ffffff;
+}
+
+
+form#formulario {
+	margin-top: 2000px;
+}
+
+div#login {
+	background-color: #C0C0C0;
+	width: 410px;
+	height: 300px;
+	margin: 80px auto 0px;
+	border-radius: 20px;
+	opacity: 0.9;
+}
+
+div#login-interno {
+	width: 390px;
+	height: 280px;
+	background-color: white;
+	position: absolute;
+	margin: 10px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 5px black;
+	overflow: hidden;
+}
+
+div#login-label {
+	background-color: #4682B4;
+	height: 35px;
+	text-align: center;
+	font: bold 20px/35px sans serif;
+
+}
+
+.input-div {
+	margin: 20px;
+	padding: 5px;
+	background-color: #f2f5f7;
+	border-radius: 3px;
+}
+
+.input-div input {
+	width: 240px;
+	height: 35px;
+	padding-left: 5px;
+	font: normal 13px sans serif;
+	color: #aeaeae;
+	border-radius: 3px;
+	border: 1px solid #bfcac6;
+}
+.input-div input {
+	width: 260px;
+	height: 35px;
+	padding-left: 5px;
+	font: normal 13px sans-serif;
+	color: #000000;
+	border-radius: 3px;
+	border: 1px solid #bfc4c6;
+	outline: none;
+}
+
+.input-div: hover {
+	background-color: #e0f1fc;
+}
+
+.input-div: hover input {
+	border-color: #7dc6dd;
+}
+
+#input-senha {
+	margin-top: -10px;
+}
+
+#botoes {
+	width: 315px;
+	margin-left: 25px;
+}
+
+#botao {
+	float: right;
+	background-color: #FF4500;
+	padding: 10px 25px;
+	font: bold 15px sans-serif;
+	border-radius: 12px;
+	border: 3px solid #9eb9c3;
+}
+
+div#botao {
+	position: relative;
+	transition: background-color 1s;
+}
+
+div#botao a {
+	color: white;
+	text-decoration: none;
+}
+
+figure.imagem-legenda figcaption {
+	position: 0px;
+}
+
+#Limpar {
+	margin-top: -7.8%;
+	margin-left: 20%;
+}
+
+#Limpar-anamnese {
+	margin-top: -13.6%;
+	margin-left: 20%;
+}
+
+#rolagemtabela {
+  width: 1200px;
+  height: 402px;
+  margin-left: 25px;
+  margin-top: -28px;
+  background-color:#F2F2F2;
+  overflow:auto;
+}
+
+#rolagemclientes{
+  width: 1200px;
+  height: 370px;
+  margin-left: 25px;
+  background-color: #F2F2F2;
+  overflow:auto;
+}
+
+div#tab-orcamento {
+	margin-top: 15px;
+	margin-left: 25px;
+	overflow:auto;
+}
+
+td.tpagamento {
+	margin-left: 100px;
+	width: 200px;
+	background-color: #157BFF;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+div#tab-pagamento {
+	margin-top: 15px;
+	margin-left: 100px;
+	overflow: auto;
+}
+
+td.todont {
+	height: 30px;
+	background-color: #157BFF;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+td.cabecalho-tab {
+	height: 30px;
+	background-color: #157BFF;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+div#rolagemtabela td.tagenda-cab {
+	height: 25px;
+	text-transform: uppercase;
+	background-color: #157BFF;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+div#rolagemtabela td.thora {
+	background-color: #157BFF;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+td.tfolga {
+	width: 600px;
+	background-color: #DCDCDC;
+}
+
+div#rolagemtabela td.tdia {
+	background-color: white;
+}
+
+td#tfolga textarea.cfolga {
+	background-color: grey;
+}
+
+div#rolagemclientes td.tab-cli {
+	width: 210px;
+	height: 3px; 
+	background-color: #157BFF;
+	text-align: center;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+
+fieldset#mensagem {
+	margin-top: 80px;
+	margin-left: 900px;
+	margin-right: 20px;
+}
+
+fieldset#rel-tela {
+	position: absolute;
+	top: 158px;
+	left: 397px;
+}
+
+p#pesq-cad a#cincluir {
+	text-decoration: none;
+}
+
+p#pesq-cad a#calterar {
+	text-decoration: none;
+}
+
+p#ppagamento {
+	margin-top: 70px;
+	margin-left: 25px;
+}
+
+table, td, th {
+	border: 1px solid gray; 
+}
