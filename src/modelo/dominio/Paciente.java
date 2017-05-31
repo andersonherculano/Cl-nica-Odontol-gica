@@ -126,6 +126,7 @@ public class Paciente {
 			return false;
 		return true;
 	}
-	
-	
+	public void setAgenda(Agenda agenda2) {
+		
+	}
 }

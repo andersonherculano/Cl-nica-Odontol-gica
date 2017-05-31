@@ -79,4 +79,12 @@ public class AgendaDAO {
 		
 		return query.getResultList();
 	}
+
+	public List<Agenda> lerTodos() {
+		return null;
+	}
+
+	public Agenda lerPorId(int parseInt) {
+		return null;
+	}
 }

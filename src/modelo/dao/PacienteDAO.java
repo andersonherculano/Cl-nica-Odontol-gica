@@ -79,4 +79,20 @@ public class PacienteDAO {
 			
 			return query.getResultList();
 		}
+
+		public Paciente lerPorId(Integer chave) {
+			return null;
+		}
+
+		public void excluir(Paciente paciente) {
+			
+		}
+
+		public List<Paciente> lerTodos() {
+			return null;
+		}
+
+		public void salvar(Paciente paciente) {
+			
+		}
 	}
