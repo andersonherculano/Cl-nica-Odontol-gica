@@ -4,12 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="_estilos/estilo.css"/>
 <title>Clínica Odontológica</title>
 </head>
 <body>
 <div id="interface">
+<header>
 			<div id="cabecalho">
-				<img src="_imagens/topo-logado.JPG" alt="Cabeçalho do Sistema" title="margem superior logado"/>
+				<img src="_imagens/topo-logado.jpg" alt="Cabeçalho do Sistema" title="margem superior logado"/>
 				<a href="#inome" id="cprincipal">Ir para o conteúdo principal</a>
 			</div>
 			<div id="sair">
@@ -27,8 +29,9 @@
 					<li><a href="relatorios.html">relatórios</a></li>
 				</ul>
 			</nav>
+			</header>
 			<p id="ficha">FICHA CADASTRAL</p>
-	<form id="form-cliente" method="get" action="">
+	<form id="form-cliente" action="/salvarPaciente" method="post">
 		<div id="lado-esquerdo">
 		<ul>
 		<p>
