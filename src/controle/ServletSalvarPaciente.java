@@ -51,6 +51,12 @@ public class ServletSalvarPaciente extends HttpServlet {
 		String dtNasc = request.getParameter("dtnasc");
 		String telefone = request.getParameter("telefone");
 		String email = request.getParameter("email");
+		String logradouro = request.getParameter("logradouro");
+		String numero = request.getParameter("numero");
+		String complemento = request.getParameter("complemento");
+		String bairro = request.getParameter("bairro");
+		String cidade = request.getParameter("cidade");
+		String cep = request.getParameter("cep");
 		String idAgenda = request.getParameter("idAgenda"); 
 		
 		List<String> erros = new ArrayList<String>();

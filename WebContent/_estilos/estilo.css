@@ -123,7 +123,7 @@ form#form-pesq ul {
 }
 
 #lado-direito {
-	margin-top: -30.6%;
+	margin-top: 60%;
 	margin-left: 50%
 }
 
@@ -157,8 +157,8 @@ form#form-pesq ul {
 }
 
 #cnum {
-	margin-top: -11.4%;
-	margin-left: 64%;
+	margin-top: 10px;
+	margin-left: 66%;
 }
 
 #cbairro {
@@ -322,7 +322,7 @@ figure.imagem-legenda figcaption {
 	position: 0px;
 }
 
-#Limpar {
+#Alterar {
 	margin-top: -7.8%;
 	margin-left: 20%;
 }
