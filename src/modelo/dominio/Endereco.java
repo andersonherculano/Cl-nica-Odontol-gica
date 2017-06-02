@@ -43,24 +43,18 @@ public class Endereco {
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
+	
 	public String getCep() {
 		return cep;
 	}
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
-	public String getUf() {
-		return uf;
-	}
-	public void setUf(String uf) {
-		this.uf = uf;
-	}
+	
 	
 	@Override
 	public String toString() {
 		return "Endereco [logradouro=" + logradouro + ", numero=" + numero + ", complemento=" + complemento
 				+ ", bairro=" + bairro + ", cidade=" + cidade + ", cep=" + cep + ", uf=" + uf + "]";
 	}
-	
-	
 }

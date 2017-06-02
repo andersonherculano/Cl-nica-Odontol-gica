@@ -13,6 +13,9 @@
 <jsp:useBean id="paciente" class="modelo.dominio.Paciente" 
 		scope="request"></jsp:useBean>
 
+<jsp:useBean id="endereco" class="modelo.dominio.Endereco" 
+		scope="request"></jsp:useBean>
+		
 <body>
 	<div id="interface">
 <header>
@@ -39,7 +42,8 @@
 			<br>
 			<p id="ficha">FICHA CADASTRAL</p>
 	<form id="form-cliente" action="salvarPaciente" method="post">
-	<input type="hidden" name="codigo" value="<%= %>">
+		<input type="hidden" name="codigo" value="<%=paciente.getCodPaciente() %>">
+		<aside>
 		<div id="lado-esquerdo">
 		<ul>
 		<p>
@@ -65,39 +69,34 @@
 		</p>	
 		</ul>
 		</div>
+		</aside>
+		<articcle>
 		<div id="lado-direito">
 			<ul>
 		<p>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
 				<li><label for="cend">Endereço* </label>
 			<br>
-					<input type="text" id="cend" name="logradouro" value="<%=paciente.getNomePaciente() %>" size=50 maxlength=120 />
+					<input type="text" id="cend" name="logradouro" value="<%=endereco.getLogradouro() %>" size=50 maxlength=120 />
 				</li>
 			<br>
 				<li id="cnum"><label for="cnum">Número*</label>
 			<br>
-				<input type="text" id="dnum" name="numero" size=5 />
+				<input type="text" id="cnum" name="numero" value="<%=endereco.getNumero() %>"size=5 />
 				</li>
-			<br>
+				<br>
 				<li><label for="ccid">Cidade* </label>
 				<br>
-				<input type="text" id="ccid" name="cidade" size=40 />
+				<input type="text" id="ccid" name="cidade" value="<%=endereco.getCidade() %>"size=40 />
 				</li>
 			<br>
-				<li id="cbairro"><label for="cbairro">Bairro* </label>
+				<li><label for="cbairro">Bairro* </label>
 				<br>
-					<input type="text" id="dbairro" name="bairro" size=30 />
+					<input type="text" id="cbairro" name="bairro" value="<%=endereco.getBairro() %>"size=30 />
 				</li>
 			<br>
 				<li><label for="ccep">CEP* </label>
 				<br>
-					<input type="text" id="ccep" name="cep" size=15 title="Digite o CEP neste formato: 11111-111" />
+					<input type="text" id="ccep" name="cep" size=15 />
 				</li>
 			<br>
 				<li id="ccomp"><label for="ccomp">Complemento </label>

@@ -1,4 +1,4 @@
-@charset "UTF-8";
+f@charset "UTF-8";
 
 p {
 	margin-left: 6%;
@@ -123,7 +123,7 @@ form#form-pesq ul {
 }
 
 #lado-direito {
-	margin-top: 60%;
+	margin-top: -13.5%;
 	margin-left: 50%
 }
 
@@ -157,7 +157,7 @@ form#form-pesq ul {
 }
 
 #cnum {
-	margin-top: 10px;
+	margin-top: 1px;
 	margin-left: 66%;
 }
 

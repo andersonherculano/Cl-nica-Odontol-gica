@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -43,6 +44,8 @@ public class Paciente {
 	@Column
 	private ArrayList<Agenda> agenda = new ArrayList<Agenda>();
 	
+	@Embedded	
+	private Endereco endereco = new Endereco();
 	
 	public Paciente(Integer codPaciente, String nomePaciente, String cpf, String rg, String dtNasc, String telefone, String email, List<Consulta> consultas, ArrayList<Agenda> agenda) {
 		super();
@@ -56,6 +59,11 @@ public class Paciente {
 		this.consultas = consultas;
 		this.agenda = agenda;
 	}
+	
+	public Paciente() {
+		
+	}
+	
 	public ArrayList<Agenda> getAgenda() {
 		return agenda;
 	}
@@ -111,11 +119,20 @@ public class Paciente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+	
 	
 	@Override
 	public String toString() {
 		return "Paciente [codPaciente=" + codPaciente + ", nomePaciente=" + nomePaciente + ", cpf=" + cpf + ", rg=" + rg
-				+ ", dtNasc=" + dtNasc + ", telefone=" + telefone + ", email=" + email + "]";
+				+ ", dtNasc=" + dtNasc + ", telefone=" + telefone + ", email=" + email + ", consultas=" + consultas
+				+ ", agenda=" + agenda + ", endereco=" + endereco + "]";
 	}
 	
 	@Override
