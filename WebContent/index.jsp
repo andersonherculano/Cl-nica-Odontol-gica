@@ -1,3 +1,5 @@
+<%@page import="java.sql.Date"%>
+<%@page import="modelo.dominio.Paciente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -7,6 +9,10 @@
 <link rel="stylesheet" href="_estilos/estilo.css" type="text/css"/>
 <title>Clínica Odontológica</title>
 </head>
+
+<jsp:useBean id="paciente" class="modelo.dominio.Paciente" 
+		scope="request"></jsp:useBean>
+
 <body>
 	<div id="interface">
 <header>
@@ -33,27 +39,28 @@
 			<br>
 			<p id="ficha">FICHA CADASTRAL</p>
 	<form id="form-cliente" action="salvarPaciente" method="post">
+	<input type="hidden" name="codigo" value="<%= %>">
 		<div id="lado-esquerdo">
 		<ul>
 		<p>
 			<li><label for="lnome">Nome Completo*</label>
 			<br>
-				<input required type="text" name="paciente" size=60 maxlength=80 placeholder="Digite o nome completo" title="Digite um nome"/>
+				<input type="text" name="paciente" value="<%=paciente.getCodPaciente() %>" size=60 maxlength=80 />
 			</li>
 			<br>
 			<li><label for="crg">RG (Somente os números)</label>
 			<br>
-				<input id="crg" name="rg" size=23 maxlength=9 placeholder="9 dígitos"></input>
+				<input id="crg" name="rg" size=23 value="<%=paciente.getRg() %>" maxlength=9 />
 			</li>
 			<br>
 			<li id="ccpf"><label for="ccpf">CPF* </label>
 			<br>
-				<input required="" id="dcpf" name="cpf" size=27 maxlength=14 placeholder="11 dígitos" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato 111.111.111-11"/>
+				<input id="dcpf" name="cpf" value="<%=paciente.getCpf() %>" size=27 maxlength=14 title="Digite o CPF no formato 111.111.111-11"/>
 			</li>
 			<br>		
 			<li><label for="cnasc">Data de Nascimento</label>
 			<br>	
-				<input type="date" id="cnasc" name="dtnasc"></input>
+				<input type=<%="Date" %> id="cnasc" name="dtnasc" value="<%=paciente.getDtNasc() %>" />
 			</li>
 		</p>	
 		</ul>
@@ -70,44 +77,44 @@
 		<br>
 				<li><label for="cend">Endereço* </label>
 			<br>
-					<input type="text" id="cend" name"logradouro" size=50 maxlength=120 placeholder="Rua, Travessa, Av."></input>
+					<input type="text" id="cend" name="logradouro" value="<%=paciente.getNomePaciente() %>" size=50 maxlength=120 />
 				</li>
 			<br>
 				<li id="cnum"><label for="cnum">Número*</label>
 			<br>
-					<input type="number" id="dnum" name="numero" size=5 min="0" max="99999"></input>
+				<input type="text" id="dnum" name="numero" size=5 />
 				</li>
 			<br>
 				<li><label for="ccid">Cidade* </label>
 				<br>
-				<input type="text" id="ccid" name="cidade" size=40 placeholder="Sua cidade" list="cidades"></input>
+				<input type="text" id="ccid" name="cidade" size=40 />
 				</li>
 			<br>
 				<li id="cbairro"><label for="cbairro">Bairro* </label>
 				<br>
-					<input type="text" id="dbairro" name="bairro" size=30 placeholder="Seu bairro" list="bairro"></input>
+					<input type="text" id="dbairro" name="bairro" size=30 />
 				</li>
 			<br>
 				<li><label for="ccep">CEP* </label>
 				<br>
-					<input type="text" required="" id="ccep" name="cep" size=15 maxlenght=8 placeholder="8 números" pattern="\d{5}-?\d{3}" title="Digite o CEP neste formato: 11111-111"></input>
+					<input type="text" id="ccep" name="cep" size=15 title="Digite o CEP neste formato: 11111-111" />
 				</li>
 			<br>
 				<li id="ccomp"><label for="ccomp">Complemento </label>
 				<br>
-					<input type="text" id="dcomp" name="complemento" size=51 placeholder="Casa, apto, quadra, lote" list="complemento"></input>
+					<input type="text" id="dcomp" name="complemento" size=51 />
 				</li>
 			<br>
 			<li>
 				<label for="cmail">Email</label>
 				<br>
-				<input type="email" id="cmail" name="email" size=50></input>
+				<input type="text" id="cmail" name="email" size=50></input>
 			</li>
 			<br>
 			<li>
 				<label for="ctel">Telefone* </label>
 				<br>
-				<input required type="tel" id="ctel" name="telefone" pattern="\([0-9]{2}\)[\s][0-9]{4}-[0-9]{5}" title="Digite o telefone no seguinte formato: (xx) xxxx-xxxx"></input>
+				<input type="text" id="ctel" name="telefone" title="Digite o telefone no seguinte formato: (xx) xxxx-xxxx"></input>
 			</li>
 			<br>
 			<li>
@@ -119,7 +126,7 @@
 			</li>
 			<br>
 			<li id="Cancelar">
-			<input type="button" value="Cancelar" onclick="window.location='listarProdutos'">
+			<input type="button" value="Cancelar" onclick="window.location='listarPaciente'">
 			</li>
 		</p>
 		</ul>

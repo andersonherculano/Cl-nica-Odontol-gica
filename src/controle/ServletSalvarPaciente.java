@@ -46,16 +46,27 @@ public class ServletSalvarPaciente extends HttpServlet {
 		
 		String codigo = request.getParameter("codigo");
 		String nomePaciente = request.getParameter("paciente");
+		@SuppressWarnings("unused")
 		String rg = request.getParameter("rg");
+		@SuppressWarnings("unused")
 		String cpf = request.getParameter("cpf");
+		@SuppressWarnings("unused")
 		String dtNasc = request.getParameter("dtnasc");
+		@SuppressWarnings("unused")
 		String telefone = request.getParameter("telefone");
+		@SuppressWarnings("unused")
 		String email = request.getParameter("email");
+		@SuppressWarnings("unused")
 		String logradouro = request.getParameter("logradouro");
+		@SuppressWarnings("unused")
 		String numero = request.getParameter("numero");
+		@SuppressWarnings("unused")
 		String complemento = request.getParameter("complemento");
+		@SuppressWarnings("unused")
 		String bairro = request.getParameter("bairro");
+		@SuppressWarnings("unused")
 		String cidade = request.getParameter("cidade");
+		@SuppressWarnings("unused")
 		String cep = request.getParameter("cep");
 		String idAgenda = request.getParameter("idAgenda"); 
 		
@@ -67,9 +78,6 @@ public class ServletSalvarPaciente extends HttpServlet {
 		} catch (NumberFormatException e) {
 			codigoInt = null;
 		}
-		
-		//Float precoCusto;
-		//Float precoVenda;
 		
 		Agenda agenda = null;
 		AgendaDAO daoAgenda = new AgendaDAO();
@@ -99,7 +107,7 @@ public class ServletSalvarPaciente extends HttpServlet {
 			//erros.add("O valor do Preço de Venda é inválido.");
 		//}
 			
-		Paciente paciente = new Paciente(codigoInt, idAgenda, idAgenda, idAgenda, idAgenda, idAgenda, idAgenda);
+		Paciente paciente = new Paciente(codigoInt, idAgenda, idAgenda, idAgenda, idAgenda, idAgenda, idAgenda, null, null);
 		paciente.setAgenda(agenda);
 		
 		if (erros.isEmpty()) {

@@ -5,10 +5,13 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -17,6 +20,9 @@ import javax.persistence.Table;
 public class Paciente {
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="PACIENTE")
+	@SequenceGenerator(name="PACIENTE", allocationSize=1,
+						sequenceName="SEQ_PACIENTE")
 	private Integer codPaciente;
 	@Column
 	private String nomePaciente;
@@ -37,8 +43,18 @@ public class Paciente {
 	@Column
 	private ArrayList<Agenda> agenda = new ArrayList<Agenda>();
 	
-	public Paciente(Integer codigoInt, String nomePaciente, String cpf, String rg, String dtnasc, String telefone,
-			String email) {
+	
+	public Paciente(Integer codPaciente, String nomePaciente, String cpf, String rg, String dtNasc, String telefone, String email, List<Consulta> consultas, ArrayList<Agenda> agenda) {
+		super();
+		this.codPaciente = codPaciente;
+		this.nomePaciente = nomePaciente;
+		this.cpf = cpf;
+		this.rg = rg;
+		this.dtNasc = dtNasc;
+		this.telefone = telefone;
+		this.email = email;
+		this.consultas = consultas;
+		this.agenda = agenda;
 	}
 	public ArrayList<Agenda> getAgenda() {
 		return agenda;
