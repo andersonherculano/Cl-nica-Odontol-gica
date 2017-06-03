@@ -10,9 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import modelo.dao.AgendaDAO;
 import modelo.dao.PacienteDAO;
-import modelo.dominio.Agenda;
 import modelo.dominio.Paciente;
 
 /**
@@ -79,17 +77,6 @@ public class ServletSalvarPaciente extends HttpServlet {
 			codigoInt = null;
 		}
 		
-		Agenda agenda = null;
-		AgendaDAO daoAgenda = new AgendaDAO();
-		try {
-			agenda = daoAgenda.lerPorId(Integer.parseInt(idAgenda));
-		} catch (NumberFormatException e) {
-			agenda = null;
-		}
-
-		if (agenda == null)
-			erros.add("O campo Agenda é obrigatório.");
-
 		if ((nomePaciente == null) || (nomePaciente.isEmpty()))
 			erros.add("O campo nome é obrigatório.");
 
@@ -107,8 +94,7 @@ public class ServletSalvarPaciente extends HttpServlet {
 			//erros.add("O valor do Preço de Venda é inválido.");
 		//}
 			
-		Paciente paciente = new Paciente(codigoInt, idAgenda, idAgenda, idAgenda, idAgenda, idAgenda, idAgenda, null, null);
-		paciente.setAgenda(agenda);
+		Paciente paciente = new Paciente();
 		
 		if (erros.isEmpty()) {
 		

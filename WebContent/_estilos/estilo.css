@@ -74,7 +74,7 @@ div#rodape-logado img {
 }
 
 p#ficha {
-	margin-top: 6%;
+	margin-top: 5%;
 	margin-left: 2%;
 	color: blue;
 }
@@ -146,9 +146,18 @@ form#form-pesq ul {
 	margin-left: 50%
 }
 
+p#endereco {
+	margin-top: -61.5%;
+}
+
+#cnum {
+	margin-top: -40.2%;
+	margin-left: 0%;
+}
+
 #ccpf {
 	margin-top: -5.4%;
-	margin-left: 17.3%;
+	margin-left: 0%;
 }
 
 #dcpf {
@@ -156,14 +165,9 @@ form#form-pesq ul {
 	margin-left: 0%;
 }
 
-#cnum {
-	margin-top: 1px;
-	margin-left: 66%;
-}
-
 #cbairro {
 	margin-top: -11.1%;
-	margin-left: 53%;
+	margin-left: 0%;
 }
 
 #dbairro {
@@ -172,8 +176,8 @@ form#form-pesq ul {
 }
 
 #ccomp {
-	margin-top: -11%;
-	margin-left: 30%;
+	margin-top: 0%;
+	margin-left: 0%;
 }
 
 #ctel-cel {
@@ -183,6 +187,16 @@ form#form-pesq ul {
 
 #dtel-cel {
 	margin-top: -10%;
+}
+
+#alterar {
+	margin-top: -6.9%;
+	margin-left: 15%;
+}
+
+#cancelar {
+	margin-top: -6.9%;
+	margin-left: 30%;
 }
 
 

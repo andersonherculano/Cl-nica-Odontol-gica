@@ -57,15 +57,27 @@
 				<input id="crg" name="rg" size=23 value="<%=paciente.getRg() %>" maxlength=9 />
 			</li>
 			<br>
-			<li id="ccpf"><label for="ccpf">CPF* </label>
+			<li><label for="ccpf">CPF* </label>
 			<br>
-				<input id="dcpf" name="cpf" value="<%=paciente.getCpf() %>" size=27 maxlength=14 title="Digite o CPF no formato 111.111.111-11"/>
+				<input id="ccpf" name="cpf" value="<%=paciente.getCpf() %>" size=27 maxlength=14 title="Digite o CPF no formato 111.111.111-11"/>
 			</li>
 			<br>		
 			<li><label for="cnasc">Data de Nascimento</label>
 			<br>	
 				<input type=<%="Date" %> id="cnasc" name="dtnasc" value="<%=paciente.getDtNasc() %>" />
 			</li>
+			<br>
+			<li><label for="cmail">Email</label>
+				<br>
+				<input type="text" id="cmail" name="email" value="<%=paciente.getEmail() %>" size=50 />
+			</li>
+			<br>
+			<li>
+				<label for="ctel">Telefone* </label>
+				<br>
+				<input type="text" id="ctel" name="telefone" value="<%=paciente.getTelefone() %>" />
+			</li>
+			<br>
 		</p>	
 		</ul>
 		</div>
@@ -73,13 +85,13 @@
 		<articcle>
 		<div id="lado-direito">
 			<ul>
-		<p>
+		<p id="endereco">
 				<li><label for="cend">Endereço* </label>
 			<br>
-					<input type="text" id="cend" name="logradouro" value="<%=endereco.getLogradouro() %>" size=50 maxlength=120 />
+					<input type="text" id="cend" name="logradouro" value="<%=endereco.getLogradouro() %>" size=40 maxlength=120 />
 				</li>
 			<br>
-				<li id="cnum"><label for="cnum">Número*</label>
+				<li><label for="cnum">Número*</label>
 			<br>
 				<input type="text" id="cnum" name="numero" value="<%=endereco.getNumero() %>"size=5 />
 				</li>
@@ -96,36 +108,24 @@
 			<br>
 				<li><label for="ccep">CEP* </label>
 				<br>
-					<input type="text" id="ccep" name="cep" size=15 />
+					<input type="text" id="ccep" name="cep" value="<%=endereco.getCep() %>"size=15 />
 				</li>
 			<br>
 				<li id="ccomp"><label for="ccomp">Complemento </label>
 				<br>
-					<input type="text" id="dcomp" name="complemento" size=51 />
+					<input type="text" id="dcomp" name="complemento" value="<%=endereco.getComplemento() %>"size=50 />
 				</li>
 			<br>
-			<li>
-				<label for="cmail">Email</label>
-				<br>
-				<input type="text" id="cmail" name="email" size=50></input>
+			<li id="salvar">
+				<input type="submit" value="Salvar">
 			</li>
 			<br>
-			<li>
-				<label for="ctel">Telefone* </label>
-				<br>
-				<input type="text" id="ctel" name="telefone" title="Digite o telefone no seguinte formato: (xx) xxxx-xxxx"></input>
+			<li id="alterar">
+				<input type="submit" value="Alterar">
 			</li>
 			<br>
-			<li>
-				<input type=submit value=Salvar>
-			</li>
-			<br>
-			<li id="Alterar">
-				<input type=submit value=Alterar>
-			</li>
-			<br>
-			<li id="Cancelar">
-			<input type="button" value="Cancelar" onclick="window.location='listarPaciente'">
+			<li id="cancelar">
+			<input type="submit" value="Cancelar" onclick="window.location='listarPaciente'">
 			</li>
 		</p>
 		</ul>
