@@ -41,7 +41,7 @@
 			</header>
 			<br>
 			<p id="ficha">FORMULÁRIO DE CADASTRO</p>
-	<form id="form-cliente" action="salvarPaciente" method="post">
+	<form id="form-cliente" action="abrirInclusaoPaciente" method="post">
 		<input type="hidden" name="codigo" value="<%=paciente.getCodPaciente() %>">
 		<aside>
 		<div id="lado-esquerdo">

@@ -53,7 +53,7 @@ public class ServletSalvarPaciente extends HttpServlet {
 		 
 		 String logradouro = request.getParameter("logradouro");
 		 String numero = request.getParameter("numero");
-		 String compelemento = request.getParameter("complemento");
+		 String complemento = request.getParameter("complemento");
 		 String bairro = request.getParameter("bairro");
 		 String cidade = request.getParameter("cidade");
 		 String cep = request.getParameter("cep");
