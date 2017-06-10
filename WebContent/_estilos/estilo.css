@@ -123,10 +123,10 @@ form#form-incluir ul {
 	margin-left: 1%;
 }
 
-form#form-alterar ul {
+form#form-editar ul {
 	list-style: none;
 	margin-top: 0%;
-	margin-left: 50%;
+	margin-left: 1%;
 }
 
 form#form-salvar ul {
@@ -141,6 +141,11 @@ form#form-excluir ul {
 	margin-left: 50%;
 }
 
+div#tab-pacientes {
+	margin-top: -1%;
+	margin-left: 1.9%;
+}
+
 form#form-pesq ul {
 	list-style: none;
 	margin-top: 2%;
@@ -148,7 +153,7 @@ form#form-pesq ul {
 }
 
 #lado-direito {
-	margin-top: -13.5%;
+	margin-top: -13.3%;
 	margin-left: 50%
 }
 

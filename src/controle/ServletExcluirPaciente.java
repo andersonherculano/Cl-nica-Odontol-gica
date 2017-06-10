@@ -1,6 +1,7 @@
 package controle;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,11 +33,18 @@ public class ServletExcluirPaciente extends HttpServlet {
 		String codigo = request.getParameter("codigo");
 		Integer chave = Integer.parseInt(codigo);
 		
-		PacienteDAO daoPac = new PacienteDAO();
-		Paciente paciente = daoPac.lerPorId(chave);
+		String email = null;
+		String telefone = null;
+		String dtNasc = null;
+		String rg = null;
+		String cpf = null;
+		String nomePaciente = null;
+		Integer codInt = null;
+		PacienteDAO dao = new PacienteDAO(codInt, nomePaciente, cpf, rg, dtNasc, telefone, email);
+		Paciente paciente = dao.lerPorId(chave);
 		
-		daoPac.excluir(paciente);
-		request.getRequestDispatcher("listarProdutos").forward(request, response);
+		dao.excluir(paciente);
+		request.getRequestDispatcher("listarPacientes").forward(request, response);
 	}
 
 	/**

@@ -18,7 +18,7 @@
 		
 <body>
 	<div id="interface">
-<header>
+		<header>
 			<div id="cabecalho">
 				<img src="_imagens/topo-logado.jpg" alt="Cabeçalho do Sistema" title="margem superior logado" />
 				<a href="#inome" id="cprincipal">Ir para o conteúdo principal</a>
@@ -29,7 +29,7 @@
 			<nav id="menu">
 				<ul>
 					<li><a href="index.jsp">home</a></li>
-					<li><a href="cadastroPaciente.jsp">cadastro paciente</a></li>
+					<li><a href="listarPacientes.jsp">cadastro paciente</a></li>
 					<li><a href="anamnese.html">anamnese</a></li>
 					<li><a href="odontograma.html">odontograma</a></li>
 					<li><a href="orcamento.html">orçamento</a></li>
@@ -38,90 +38,90 @@
 					<li><a href="relatorios.html">relatórios</a></li>
 				</ul>
 			</nav>
-			</header>
-			<br>
-			<p id="ficha">FORMULÁRIO DE CADASTRO</p>
-	<form id="form-incluir" action="abrirInclusaoPaciente" method="post">
-		<input type="hidden" name="codigo" value="<%=paciente.getCodPaciente() %>">
-		<aside>
-		<div id="lado-esquerdo">
-		<ul>
-		<p>
-			<li><label for="lnome">Nome Completo*</label>
-			<br>
-				<input type="text" name="paciente" value="<%=paciente.getNomePaciente() %>" size=60 maxlength=80 />
-			</li>
-			<br>
-			<li><label for="crg">RG (Somente os números)</label>
-			<br>
-				<input id="crg" name="rg" size=23 value="<%=paciente.getRg() %>" maxlength=9 />
-			</li>
-			<br>
-			<li><label for="ccpf">CPF* </label>
-			<br>
-				<input id="ccpf" name="cpf" value="<%=paciente.getCpf() %>" size=27 maxlength=14 title="Digite o CPF no formato 111.111.111-11"/>
-			</li>
-			<br>		
-			<li><label for="cnasc">Data de Nascimento</label>
-			<br>	
-				<input type=<%="Date" %> id="cnasc" name="dtnasc" value="<%=paciente.getDtNasc() %>" />
-			</li>
-			<br>
-			<li><label for="cmail">Email</label>
-				<br>
-				<input type="text" id="cmail" name="email" value="<%=paciente.getEmail() %>" size=50 />
-			</li>
-			<br>
-			<li>
-				<label for="ctel">Telefone* </label>
-				<br>
-				<input type="text" id="ctel" name="telefone" value="<%=paciente.getTelefone() %>" />
-			</li>
-			<br>
-		</p>	
-		</ul>
-		</div>
-		</aside>
-		<articcle>
-		<div id="lado-direito">
+		</header>
+	<br>
+		<p id="ficha">FORMULÁRIO DE CADASTRO</p>
+			<form id="form-incluir" action="" method="post">
+			<input type="hidden" name="codigo" value="<%=paciente.getCodPaciente() %>">
+			<aside>
+			<div id="lado-esquerdo">
 			<ul>
-		<p id="endereco">
-				<li><label for="cend">Endereço* </label>
-			<br>
-					<input type="text" id="cend" name="logradouro" value="<%=endereco.getLogradouro() %>" size=40 maxlength=120 />
-				</li>
-			<br>
-				<li><label for="cnum">Número*</label>
-			<br>
-				<input type="text" id="cnum" name="numero" value="<%=endereco.getNumero() %>"size=5 />
+			<p>
+				<li><label for="lnome">Nome Completo*</label>
+				<br>
+					<input type="text" name="paciente" value="<%=paciente.getNomePaciente() %>" size=60 maxlength=80 />
 				</li>
 				<br>
-				<li><label for="ccid">Cidade* </label>
+				<li><label for="crg">RG (Somente os números)</label>
 				<br>
-				<input type="text" id="ccid" name="cidade" value="<%=endereco.getCidade() %>"size=40 />
+					<input id="crg" name="rg" size=23 value="<%=paciente.getRg() %>" maxlength=9 />
 				</li>
-			<br>
-				<li><label for="cbairro">Bairro* </label>
 				<br>
-					<input type="text" id="cbairro" name="bairro" value="<%=endereco.getBairro() %>"size=30 />
-				</li>
-			<br>
-				<li><label for="ccep">CEP* </label>
+				<li><label for="ccpf">CPF* </label>
 				<br>
-					<input type="text" id="ccep" name="cep" value="<%=endereco.getCep() %>"size=15 />
+					<input id="ccpf" name="cpf" value="<%=paciente.getCpf() %>" size=27 maxlength=14 title="Digite o CPF no formato 111.111.111-11"/>
 				</li>
-			<br>
-				<li id="ccomp"><label for="ccomp">Complemento </label>
+				<br>		
+				<li><label for="cnasc">Data de Nascimento</label>
+				<br>	
+					<input type=<%="Date" %> id="cnasc" name="dtnasc" value="<%=paciente.getDtNasc() %>" />
+				</li>
 				<br>
-					<input type="text" id="dcomp" name="complemento" value="<%=endereco.getComplemento() %>"size=50 />
+				<li><label for="cmail">Email</label>
+					<br>
+					<input type="text" id="cmail" name="email" value="<%=paciente.getEmail() %>" size=50 />
 				</li>
-			<br>
-			<li id="novo">
-				<input type="submit" value="Novo" />
-			</li>
-		</p>
-		</ul>
-		</div>
+				<br>
+				<li>
+					<label for="ctel">Telefone* </label>
+					<br>
+					<input type="text" id="ctel" name="telefone" value="<%=paciente.getTelefone() %>" />
+				</li>
+				<br>
+			</p>	
+			</ul>
+			</div>
+			</aside>
+			<articcle>
+			<div id="lado-direito">
+				<ul>
+			<p id="endereco">
+					<li><label for="cend">Endereço* </label>
+				<br>
+						<input type="text" id="cend" name="logradouro" value="<%=endereco.getLogradouro() %>" size=40 maxlength=120 />
+					</li>
+				<br>
+					<li><label for="cnum">Número*</label>
+				<br>
+					<input type="text" id="cnum" name="numero" value="<%=endereco.getNumero() %>"size=5 />
+					</li>
+					<br>
+					<li><label for="ccid">Cidade* </label>
+					<br>
+					<input type="text" id="ccid" name="cidade" value="<%=endereco.getCidade() %>"size=40 />
+					</li>
+				<br>
+					<li><label for="cbairro">Bairro* </label>
+					<br>
+						<input type="text" id="cbairro" name="bairro" value="<%=endereco.getBairro() %>"size=30 />
+					</li>
+				<br>
+					<li><label for="ccep">CEP* </label>
+					<br>
+						<input type="text" id="ccep" name="cep" value="<%=endereco.getCep() %>"size=15 />
+					</li>
+				<br>
+					<li id="ccomp"><label for="ccomp">Complemento </label>
+					<br>
+						<input type="text" id="dcomp" name="complemento" value="<%=endereco.getComplemento() %>"size=50 />
+					</li>
+				<br>
+				<li id="novo">
+					<input type="submit" value="Novo" />
+				</li>
+			</p>
+			</ul>
+			</div>
 	</form>
 	<form id="form-alterar" action="editarPaciente" method="post">
 		<ul>

@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="_estilos/estilo.css" type="text/css"/>
 <title>Clínica Odontológica</title>
 </head>
 
@@ -19,21 +20,11 @@
 %>
 
 <body>
-	
-	<div id="msg">
-	<ul>
-<%  if (erros != null)
-		for (String mensagem: erros) { %>
-		<li><%=mensagem%></li>
-	<% } %>
-	</ul>
-	</div>
-	
 	<div id="interface">
-<header>
+		<header>
 			<div id="cabecalho">
 				<img src="_imagens/topo-logado.jpg" alt="Cabeçalho do Sistema" title="margem superior logado" />
-				<a href="#lnome" id="cprincipal">Ir para o conteúdo principal</a>
+				<a href="#inome" id="cprincipal">Ir para o conteúdo principal</a>
 			</div>
 			<div id="sair">
 				<a id="sair" href="index.jsp">Sair</a>
@@ -41,7 +32,7 @@
 			<nav id="menu">
 				<ul>
 					<li><a href="index.jsp">home</a></li>
-					<li><a href="cadastroPaciente.jsp">cadastro paciente</a></li>
+					<li><a href="listarPacientes.jsp">cadastro paciente</a></li>
 					<li><a href="anamnese.html">anamnese</a></li>
 					<li><a href="odontograma.html">odontograma</a></li>
 					<li><a href="orcamento.html">orçamento</a></li>
@@ -52,8 +43,8 @@
 			</nav>
 			</header>
 			<br>
-			<p id="ficha">FICHA CADASTRAL</p>
-	<form id="form-salvar" action="salvarPaciente" method="post">
+			<p id="ficha">FORMULÁRIO DE CADASTRO</p>
+	<form id="form-editar" action="salvarPaciente" method="post">
 		<input type="hidden" name="codigo" value="<%=paciente.getCodPaciente() %>">
 		<aside>
 		<div id="lado-esquerdo">
@@ -128,13 +119,13 @@
 					<input type="text" id="dcomp" name="complemento" value="<%=endereco.getComplemento() %>"size=50 />
 				</li>
 			<br>
-			<li id="salvar">
-				<input type="submit" value="Salvar" />
-			</li>
+				<li id="salvar">
+					<input type="submit" value="Salvar" />
+				</li>
 		</p>
 		</ul>
 		</div>
 	</form>
-		</div>
+	</div>
 </body>
 </html>

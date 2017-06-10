@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="_estilos/estilo.css" type="text/css"/>
-<title>Insert title here</title>
+<title>Clínica Odontológica</title>
 </head>
 <body>
 
@@ -16,12 +16,12 @@
 				<a href="#inome" id="cprincipal">Ir para o conteúdo principal</a>
 			</div>
 			<div id="sair">
-				<a id="sair" href="index.html">Sair</a>
+				<a id="sair" href="index.jsp">Sair</a>
 			</div>
 			<nav id="menu">
 				<ul>
 					<li><a href="index.jsp">home</a></li>
-					<li><a href="cadastroPaciente.jsp">cadastro paciente</a></li>
+					<li><a href="listarPacientes.jsp">cadastro paciente</a></li>
 					<li><a href="anamnese.html">anamnese</a></li>
 					<li><a href="odontograma.html">odontograma</a></li>
 					<li><a href="orcamento.html">orçamento</a></li>

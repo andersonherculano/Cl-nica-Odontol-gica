@@ -43,7 +43,8 @@ public class Paciente {
 	@Column
 	private ArrayList<Agenda> agenda = new ArrayList<Agenda>();
 	
-	public Paciente(Integer codPaciente, String nomePaciente, String cpf, String rg, String dtNasc, String telefone, String email, List<Consulta> consultas, ArrayList<Agenda> agenda) {
+	public Paciente(Integer codPaciente, String nomePaciente, String cpf, String rg, String dtNasc, String telefone,
+			String email, List<Consulta> consultas, ArrayList<Agenda> agenda) {
 		super();
 		this.codPaciente = codPaciente;
 		this.nomePaciente = nomePaciente;
@@ -57,9 +58,8 @@ public class Paciente {
 	}
 	
 	public Paciente() {
-		
+		super();
 	}
-	
 	public ArrayList<Agenda> getAgenda() {
 		return agenda;
 	}

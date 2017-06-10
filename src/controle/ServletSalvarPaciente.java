@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -69,29 +68,41 @@ public class ServletSalvarPaciente extends HttpServlet {
 		
 		if ((nomePaciente == null) || (nomePaciente.isEmpty()))
 			erros.add("O campo nome é obrigatório.");
+		
 		if ((rg == null) || (rg.isEmpty()))
 			erros.add("O campo nome é obrigatório.");
+		
 		if ((cpf == null) || (cpf.isEmpty()))
 			erros.add("O campo cpf é obrigatório.");
+		
 		if ((dtNasc == null) || (dtNasc.isEmpty()))
 			erros.add("O campo data de nascimento é obrigatório.");
+		
 		if ((telefone == null) || (telefone.isEmpty()))
 			erros.add("O campo telefone é obrigatório.");
+		
+		if ((telefone == null) || (telefone.isEmpty()))
+			erros.add("O campo telefone é obrigatório.");
+		
 		if ((logradouro == null) || (logradouro.isEmpty()))
 			erros.add("O campo logradouro é obrigatório.");
+		
 		if ((numero == null) || (numero.isEmpty()))
 			erros.add("O campo número é obrigatório.");
+		
 		if ((cidade == null) || (cidade.isEmpty()))
 			erros.add("O campo cidade é obrigatório.");
+		
 		if ((bairro == null) || (bairro.isEmpty()))
 			erros.add("O campo bairro é obrigatório.");
+		
 		if ((cep == null) || (cep.isEmpty()))
 			erros.add("O campo CEP é obrigatório.");
 		
 		Paciente paciente = new Paciente();
 		
 		if (erros.isEmpty()) {
-			PacienteDAO dao = new PacienteDAO();
+			PacienteDAO dao = new PacienteDAO(codInt, nomePaciente, cpf, rg, dtNasc, telefone, email);
 			dao.salvar(paciente);
 			response.sendRedirect("listarPacientes");
 		}
