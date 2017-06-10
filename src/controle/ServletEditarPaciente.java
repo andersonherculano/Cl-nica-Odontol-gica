@@ -1,7 +1,6 @@
 package controle;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,9 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import modelo.dao.AgendaDAO;
 import modelo.dao.PacienteDAO;
-import modelo.dominio.Agenda;
 import modelo.dominio.Paciente;
 
 /**
@@ -40,11 +37,7 @@ public class ServletEditarPaciente extends HttpServlet {
 		PacienteDAO daoPac = new PacienteDAO();
 		Paciente paciente = daoPac.lerPorId(chave);
 		request.setAttribute("paciente", paciente);
-		
-		AgendaDAO daoAgenda = new AgendaDAO();
-		List<Agenda> lista = daoAgenda.lerTodos();
-		request.setAttribute("lista", lista);
-		
+				
 		RequestDispatcher desp = request.getRequestDispatcher("editarPaciente.jsp");
 		desp.forward(request, response);
 	}

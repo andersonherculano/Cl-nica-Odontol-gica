@@ -111,5 +111,4 @@ public abstract class JpaDAO<T> implements GenericDAO<T>
 	{
 		this.getEntityManager().getTransaction().rollback();
 	}
-
 }
