@@ -24,18 +24,19 @@ public class Paciente {
 	@SequenceGenerator(name="PACIENTE", allocationSize=1,
 						sequenceName="SEQ_PACIENTE")
 	private Integer codPaciente;
-	@Column
-	private String nomePaciente;
-	@Column
-	private String cpf;
-	@Column
-	private String rg;
-	@Column
-	private String dtNasc;
-	@Column
-	private String telefone;
-	@Column
-	private String email;
+	
+	@Column(length = 100, nullable = false)
+	private String nomePaciente = "";
+	@Column(length = 11, nullable = false)
+	private String cpf = "";
+	@Column(length = 9, nullable = false)
+	private String rg = "";
+	@Column(length = 8, nullable = false)
+	private String dtNasc = "";
+	@Column(length = 11, nullable = false)
+	private String telefone = "";
+	@Column(length = 100, nullable = false)
+	private String email = "";
 	
 	@OneToMany(mappedBy = "paciente")
 	private List<Consulta> consultas;
@@ -76,6 +77,13 @@ public class Paciente {
 	public Integer getCodPaciente() {
 		return codPaciente;
 	}
+	
+	public String getCodPacienteStr() {
+		if (this.codPaciente == null)
+			return "";
+		return this.codPaciente.toString();
+	}
+	
 	public void setCodPaciente(Integer codPaciente) {
 		this.codPaciente = codPaciente;
 	}

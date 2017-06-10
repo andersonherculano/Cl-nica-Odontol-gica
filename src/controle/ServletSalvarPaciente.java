@@ -42,11 +42,11 @@ public class ServletSalvarPaciente extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		 String codPaciente = request.getParameter("codPaciente");
+		 String codPaciente = request.getParameter("codigo");
 		 String nomePaciente = request.getParameter("paciente");
 		 String cpf = request.getParameter("cpf");
 		 String rg = request.getParameter("rg");
-		 String dtNasc = request.getParameter("dtNasc");
+		 String dtNasc = request.getParameter("dtnasc");
 		 String telefone = request.getParameter("telefone");
 		 String email = request.getParameter("email");
 		 

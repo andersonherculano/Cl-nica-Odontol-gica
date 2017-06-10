@@ -43,24 +43,29 @@
 			</nav>
 			</header>
 			<br>
-			<p id="ficha">FORMULÁRIO DE CADASTRO</p>
+			<br>
+			<br>
+			<br>
 	<form id="form-editar" action="salvarPaciente" method="post">
-		<input type="hidden" name="codigo" value="<%=paciente.getCodPaciente() %>">
 		<aside>
-		<div id="lado-esquerdo">
-		<ul>
-		<p>
-			<li><label for="lnome">Nome Completo*</label>
+			<div id="lado-esquerdo">
+			<ul>
+			<p>
+				<li><label for="codigo">Código</label>
+					<input type="hidden" name="codigo" value="<%=paciente.getCodPacienteStr() %>" />
+				</li>
 			<br>
-				<input type="text" name="paciente" value="<%=paciente.getNomePaciente() %>" size=60 maxlength=80 />
-			</li>
+				<li><label for="lnome">Nome Completo*</label>
 			<br>
-			<li><label for="crg">RG (Somente os números)</label>
+					<input type="text" name="paciente" value="<%=paciente.getNomePaciente() %>" size=60 maxlength=80 />
+				</li>
+			<br>
+				<li><label for="crg">RG (Somente os números)</label>
 			<br>
 				<input id="crg" name="rg" size=23 value="<%=paciente.getRg() %>" maxlength=9 />
 			</li>
 			<br>
-			<li><label for="ccpf">CPF* </label>
+				<li><label for="ccpf">CPF* </label>
 			<br>
 				<input id="ccpf" name="cpf" value="<%=paciente.getCpf() %>" size=27 maxlength=14 title="Digite o CPF no formato 111.111.111-11"/>
 			</li>
