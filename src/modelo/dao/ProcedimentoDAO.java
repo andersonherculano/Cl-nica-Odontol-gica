@@ -12,7 +12,7 @@ public class ProcedimentoDAO {
 	
 	public ProcedimentoDAO() {
 		super();
-		this.manager = UtilJPA.criarEntityManager();
+		this.manager = JPAUtil.criarEntityManager();
 	}
 		
 		public void fecharConexao() {

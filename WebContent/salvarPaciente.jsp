@@ -36,7 +36,7 @@
 				<a href="#lnome" id="cprincipal">Ir para o conteúdo principal</a>
 			</div>
 			<div id="sair">
-				<a id="sair" href="index.jsp">Sair</a>
+				<a id="sair" href="index.html">Sair</a>
 			</div>
 			<nav id="menu">
 				<ul>
@@ -53,7 +53,7 @@
 			</header>
 			<br>
 			<p id="ficha">FICHA CADASTRAL</p>
-	<form id="form-salvar" action="salvarPaciente" method="post">
+	<form id="form-cliente" action="salvarPaciente" method="post">
 		<input type="hidden" name="codigo" value="<%=paciente.getCodPaciente() %>">
 		<aside>
 		<div id="lado-esquerdo">
@@ -61,7 +61,7 @@
 		<p>
 			<li><label for="lnome">Nome Completo*</label>
 			<br>
-				<input type="text" name="paciente" value="<%=paciente.getNomePaciente() %>" size=60 maxlength=80 />
+				<input type="text" name="paciente" value="<%=paciente.getCodPaciente() %>" size=60 maxlength=80 />
 			</li>
 			<br>
 			<li><label for="crg">RG (Somente os números)</label>
@@ -129,12 +129,20 @@
 				</li>
 			<br>
 			<li id="salvar">
-				<input type="submit" value="Salvar" />
+				<input type="submit" value="Salvar">
+			</li>
+			<br>
+			<li id="alterar">
+				<input type="submit" value="Alterar">
+			</li>
+			<br>
+			<li id="cancelar">
+			<input type="submit" value="Cancelar" onclick="window.location='listarPaciente'">
 			</li>
 		</p>
 		</ul>
 		</div>
-	</form>
+		</form>
 		</div>
 </body>
 </html>

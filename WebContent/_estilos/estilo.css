@@ -117,10 +117,28 @@ p#pagenda-paciente {
 }
 
 
-form#form-cliente ul {
+form#form-incluir ul {
 	list-style: none;
 	margin-top: 0%;
 	margin-left: 1%;
+}
+
+form#form-alterar ul {
+	list-style: none;
+	margin-top: 0%;
+	margin-left: 50%;
+}
+
+form#form-salvar ul {
+	list-style: none;
+	margin-top: 0%;
+	margin-left: 50%;
+}
+
+form#form-excluir ul {
+	list-style: none;
+	margin-top: 0%;
+	margin-left: 50%;
 }
 
 form#form-pesq ul {

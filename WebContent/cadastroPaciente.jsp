@@ -41,7 +41,7 @@
 			</header>
 			<br>
 			<p id="ficha">FORMULÁRIO DE CADASTRO</p>
-	<form id="form-cliente" action="abrirInclusaoPaciente" method="post">
+	<form id="form-incluir" action="abrirInclusaoPaciente" method="post">
 		<input type="hidden" name="codigo" value="<%=paciente.getCodPaciente() %>">
 		<aside>
 		<div id="lado-esquerdo">
@@ -49,7 +49,7 @@
 		<p>
 			<li><label for="lnome">Nome Completo*</label>
 			<br>
-				<input type="text" name="paciente" value="<%=paciente.getCodPaciente() %>" size=60 maxlength=80 />
+				<input type="text" name="paciente" value="<%=paciente.getNomePaciente() %>" size=60 maxlength=80 />
 			</li>
 			<br>
 			<li><label for="crg">RG (Somente os números)</label>
@@ -119,21 +119,31 @@
 			<li id="novo">
 				<input type="submit" value="Novo" />
 			</li>
-			<li id="salvar">
-				<input type="submit" value="Salvar" />
-			</li>
-			<br>
-			<li id="alterar" />
-				<input type="submit" value="Alterar">
-			</li>
-			<br>
-			<li id="cancelar">
-			<input type="submit" value="Cancelar" onclick="window.location='listarPaciente'" />
-			</li>
 		</p>
 		</ul>
 		</div>
-		</form>
-		</div>
+	</form>
+	<form id="form-alterar" action="editarPaciente" method="post">
+		<ul>
+			<li id="alterar" />
+				<input type="submit" value="Alterar">
+			</li>
+		</ul>
+	</form>
+	<form id="form-salvar" action="salvarPacinte" method="post">
+		<ul>
+			<li id="salvar">
+				<input type="submit" value="Salvar" />
+			</li>
+		</ul>
+	</form>
+	<form id="form-excluir" action="excluirPaciente" method="post">
+		<ul>
+			<li id="excluir">
+				<input type="submit" value="Excluir" />
+			</li>
+		</ul>
+	</form>
+	</div>
 </body>
 </html>

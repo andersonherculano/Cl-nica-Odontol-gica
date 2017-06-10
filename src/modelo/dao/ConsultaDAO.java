@@ -13,7 +13,7 @@ public class ConsultaDAO {
 	public ConsultaDAO() {
 		super();
 		
-		this.manager = UtilJPA.criarEntityManager();
+		this.manager = JPAUtil.criarEntityManager();
 	}
 
 	public void fecharConexao() {

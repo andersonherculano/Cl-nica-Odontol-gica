@@ -13,7 +13,7 @@ public class AgendaDAO {
 	public AgendaDAO() {
 		super();
 		
-		this.manager = UtilJPA.criarEntityManager();
+		this.manager = JPAUtil.criarEntityManager();
 	}
 
 	public void fecharConexao() {
