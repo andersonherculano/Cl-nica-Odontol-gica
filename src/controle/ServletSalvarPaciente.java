@@ -14,11 +14,11 @@ import modelo.dao.PacienteDAO;
 import modelo.dominio.Paciente;
 
 /**
- * Servlet implementation class ServletSalvarProduto
+ * Servlet implementation class ServletSalvarPaciente
  */
 @WebServlet("/salvarPaciente")
 public class ServletSalvarPaciente extends HttpServlet {
-	 static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -42,76 +42,36 @@ public class ServletSalvarPaciente extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		 String codPaciente = request.getParameter("codigo");
-		 String nomePaciente = request.getParameter("paciente");
-		 String cpf = request.getParameter("cpf");
-		 String rg = request.getParameter("rg");
-		 String dtNasc = request.getParameter("dtnasc");
-		 String telefone = request.getParameter("telefone");
-		 String email = request.getParameter("email");
-		 
-		 String logradouro = request.getParameter("logradouro");
-		 String numero = request.getParameter("numero");
-		 String complemento = request.getParameter("complemento");
-		 String bairro = request.getParameter("bairro");
-		 String cidade = request.getParameter("cidade");
-		 String cep = request.getParameter("cep");
-		 
+		String codigo = request.getParameter("codigo");
+		String nomePaciente = request.getParameter("paciente"); 
+		
 		List<String> erros = new ArrayList<String>();
 		
-		Integer codInt = null;
+		Integer codigoInt = null;
 		try {
-			codInt = Integer.parseInt(codPaciente);
+			codigoInt = Integer.parseInt(codigo);
 		} catch (NumberFormatException e) {
-			codInt = null;
+			codigoInt = null;
 		}
 		
 		if ((nomePaciente == null) || (nomePaciente.isEmpty()))
 			erros.add("O campo nome é obrigatório.");
-		
-		if ((rg == null) || (rg.isEmpty()))
-			erros.add("O campo nome é obrigatório.");
-		
-		if ((cpf == null) || (cpf.isEmpty()))
-			erros.add("O campo cpf é obrigatório.");
-		
-		if ((dtNasc == null) || (dtNasc.isEmpty()))
-			erros.add("O campo data de nascimento é obrigatório.");
-		
-		if ((telefone == null) || (telefone.isEmpty()))
-			erros.add("O campo telefone é obrigatório.");
-		
-		if ((telefone == null) || (telefone.isEmpty()))
-			erros.add("O campo telefone é obrigatório.");
-		
-		if ((logradouro == null) || (logradouro.isEmpty()))
-			erros.add("O campo logradouro é obrigatório.");
-		
-		if ((numero == null) || (numero.isEmpty()))
-			erros.add("O campo número é obrigatório.");
-		
-		if ((cidade == null) || (cidade.isEmpty()))
-			erros.add("O campo cidade é obrigatório.");
-		
-		if ((bairro == null) || (bairro.isEmpty()))
-			erros.add("O campo bairro é obrigatório.");
-		
-		if ((cep == null) || (cep.isEmpty()))
-			erros.add("O campo CEP é obrigatório.");
-		
-		Paciente paciente = new Paciente();
+			
+		Paciente Paciente = new Paciente();
 		
 		if (erros.isEmpty()) {
+		
 			PacienteDAO dao = new PacienteDAO();
-			dao.incluir(paciente);
+			dao.salvar(Paciente);
 			
 			response.sendRedirect("listarPacientes");
 		}
 		else
 		{
-			request.setAttribute("paciente", paciente);
+			request.setAttribute("Paciente", Paciente);
 			request.setAttribute("erros", erros);
 			request.getRequestDispatcher("editarPaciente.jsp").forward(request, response);;
 		}
 	}
+
 }

@@ -57,10 +57,10 @@ public class Paciente {
 		this.consultas = consultas;
 		this.agenda = agenda;
 	}
-	
 	public Paciente() {
-		super();
+		
 	}
+	
 	public ArrayList<Agenda> getAgenda() {
 		return agenda;
 	}

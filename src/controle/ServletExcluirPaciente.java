@@ -34,9 +34,9 @@ public class ServletExcluirPaciente extends HttpServlet {
 		Integer chave = Integer.parseInt(codigo);
 		
 		PacienteDAO dao = new PacienteDAO();
-		Paciente paciente = dao.buscar(chave);
+		Paciente paciente = dao.lerPorId(chave);
 		
-		dao.remover(paciente);
+		dao.excluir(paciente);
 	
 		request.getRequestDispatcher("listarPacientes").forward(request, response);
 	}

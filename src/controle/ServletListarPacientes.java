@@ -32,7 +32,7 @@ public class ServletListarPacientes extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PacienteDAO dao = new PacienteDAO();
-		List<Paciente> lista = dao.buscarTodos();
+		List<Paciente> lista = dao.lerTodos();
 		
 		request.setAttribute("lista", lista);
 		
