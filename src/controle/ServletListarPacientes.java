@@ -31,15 +31,8 @@ public class ServletListarPacientes extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String rg = null;
-		String cpf = null;
-		String nomePaciente = null;
-		Integer codInt = null;
-		String dtNasc = null;
-		String telefone = null;
-		String email = null;
-		PacienteDAO dao = new PacienteDAO(codInt, nomePaciente, cpf, rg, dtNasc, telefone, email);
-		List<Paciente> lista = dao.lerTodos();
+		PacienteDAO dao = new PacienteDAO();
+		List<Paciente> lista = dao.buscarTodos();
 		
 		request.setAttribute("lista", lista);
 		

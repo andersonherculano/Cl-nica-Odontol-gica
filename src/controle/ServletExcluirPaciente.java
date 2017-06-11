@@ -33,17 +33,11 @@ public class ServletExcluirPaciente extends HttpServlet {
 		String codigo = request.getParameter("codigo");
 		Integer chave = Integer.parseInt(codigo);
 		
-		String email = null;
-		String telefone = null;
-		String dtNasc = null;
-		String rg = null;
-		String cpf = null;
-		String nomePaciente = null;
-		Integer codInt = null;
-		PacienteDAO dao = new PacienteDAO(codInt, nomePaciente, cpf, rg, dtNasc, telefone, email);
-		Paciente paciente = dao.lerPorId(chave);
+		PacienteDAO dao = new PacienteDAO();
+		Paciente paciente = dao.buscar(chave);
 		
-		dao.excluir(paciente);
+		dao.remover(paciente);
+	
 		request.getRequestDispatcher("listarPacientes").forward(request, response);
 	}
 

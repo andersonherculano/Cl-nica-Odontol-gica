@@ -34,15 +34,8 @@ public class ServletEditarPaciente extends HttpServlet {
 		String codigo = request.getParameter("codigo");
 		Integer chave = Integer.parseInt(codigo);
 		
-		Integer codInt = null;
-		String nomePaciente = null;
-		String cpf = null;
-		String rg = null;
-		String dtNasc = null;
-		String telefone = null;
-		String email = null;
-		PacienteDAO dao = new PacienteDAO(codInt, nomePaciente, cpf, rg, dtNasc, telefone, email);
-		Paciente paciente = dao.lerPorId(chave);
+		PacienteDAO dao = new PacienteDAO();
+		Paciente paciente = dao.buscar(chave);
 		request.setAttribute("paciente", paciente);
 				
 		RequestDispatcher desp = request.getRequestDispatcher("editarPaciente.jsp");

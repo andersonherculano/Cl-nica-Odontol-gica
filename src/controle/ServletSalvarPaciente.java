@@ -102,8 +102,9 @@ public class ServletSalvarPaciente extends HttpServlet {
 		Paciente paciente = new Paciente();
 		
 		if (erros.isEmpty()) {
-			PacienteDAO dao = new PacienteDAO(codInt, nomePaciente, cpf, rg, dtNasc, telefone, email);
-			dao.salvar(paciente);
+			PacienteDAO dao = new PacienteDAO();
+			dao.incluir(paciente);
+			
 			response.sendRedirect("listarPacientes");
 		}
 		else

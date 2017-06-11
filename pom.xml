@@ -6,47 +6,43 @@
   <packaging>war</packaging>
   <name>clinica</name>
   <description>Projeto para Clínica Odontológica</description>
-  
-  <dependencies>
+
+<dependencies>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.1.0.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.1.0.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.4.1208.jre7</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>taglibs</groupId>
 			<artifactId>standard</artifactId>
-			<version>1.1.2</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-			<version>1.2</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.el</groupId>
 			<artifactId>javax.el-api</artifactId>
-			<version>3.0.0</version>
 			<scope>provided</scope>
 		</dependency>
-
-	</dependencies>
+		<dependency>
+    		<groupId>org.hibernate.javax.persistence</groupId>
+    		<artifactId>hibernate-jpa-2.1-api</artifactId>
+		</dependency>		
+</dependencies>  
   
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -68,4 +64,48 @@
       </plugin>
     </plugins>
   </build>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-core</artifactId>
+  			<version>5.1.0.Final</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-entitymanager</artifactId>
+  			<version>5.1.0.Final</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.postgresql</groupId>
+  			<artifactId>postgresql</artifactId>
+  			<version>9.4.1208.jre7</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>javax.servlet</groupId>
+  			<artifactId>javax.servlet-api</artifactId>
+  			<version>3.1.0</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>taglibs</groupId>
+  			<artifactId>standard</artifactId>
+  			<version>1.1.2</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>javax.servlet</groupId>
+  			<artifactId>jstl</artifactId>
+  			<version>1.2</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>javax.el</groupId>
+  			<artifactId>javax.el-api</artifactId>
+  			<version>3.0.0</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.hibernate.javax.persistence</groupId>
+  			<artifactId>hibernate-jpa-2.1-api</artifactId>
+  			<version>1.0.0.Final</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>
